@@ -48,19 +48,17 @@
         <div class="col-md-6 form-container">
             <h2>添加用户</h2>
             <form action="<%=basePath%>/stu/save" method="post">
-                <input  value="${bk.id}" type="hidden"  name="id"  />
-                <div class="form-group">
                 <div class="mb-3">
                     <label for="name" class="form-label">名称:</label>
-                    <input value="${bk.name}" type="text" name="name" class="form-control" id="name" placeholder="请输入名称" required>
+                    <input type="text" name="name" class="form-control" id="name" placeholder="请输入名称" required>
                 </div>
                 <div class="mb-3">
                     <label for="price" class="form-label">价格:</label>
-                    <input value="${bk.price}" type="text" name="price" class="form-control" id="price" placeholder="请输入价格" required>
+                    <input type="text" name="price" class="form-control" id="price" placeholder="请输入价格" required>
                 </div>
                 <div class="mb-3">
                     <label for="publisher" class="form-label">出版社:</label>
-                    <input value="${bk.publisher}" type="text" name="publisher" class="form-control" id="publisher" placeholder="请输入出版社" required>
+                    <input type="text" name="publisher" class="form-control" id="publisher" placeholder="请输入出版社" required>
                 </div>
                 <button type="submit" class="btn btn-primary btn-submit">提交</button>
             </form>
