@@ -176,6 +176,7 @@
             <td>${a.price}</td>
             <td>${a.publisher}</td>
             <td><a href="<%=basePath%>/stu/del?id=${a.id}">删除</a></td>
+            <td><a href="<%=basePath%>/stu/edit?id=${a.id}">修改</a></td>
         </tr>
     </c:forEach>
     </tbody>

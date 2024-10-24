@@ -26,14 +26,23 @@ public class BookController {
     public String add(){
         return "add";
     }
+    @RequestMapping("edit")
+    public String edit(Model model ,Integer id){
+        Book bk =bookDao.edit(id);
+        model.addAttribute("bk",bk);
+        return "add";
+    }
 
     @RequestMapping("save")
     public String save(Book book){
-        int a =bookDao.save(book);
+        if (book.getId()==null || book.getId().equals(""))
+        {int a=bookDao.save(book);}
+        else
+        {int a=bookDao.update(book);}
         return "redirect: query";
     }
     @RequestMapping("del")
-    public String del(int id){
+    public String del(Integer id){
         int a =bookDao.del(id);
         return "redirect: query";
     }
